@@ -15,5 +15,8 @@ class InterfaxController < ApplicationController
   soap_action "GetFaxImage", :args => { :GetFaxImage => GetFaxImage }, :return => GetFaxImageResponse
   include Interfax::GetFaxImageAction
 
+  soap_action "CancelFax", :args => { :CancelFax => CancelFax }, :return => CancelFaxResponse
+  include Interfax::CancelFaxAction
+
 end
 
