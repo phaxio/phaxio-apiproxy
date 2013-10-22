@@ -11,7 +11,7 @@ class Sendfax < WashOut::Type
 end
 
 class SendfaxResponse < WashOut::Type
-  map :SendfaxResponse => { :SendfaxResult => :int }
+  map :SendfaxResponse => { :SendfaxResult => :integer }
 end
 
 module Interfax
