@@ -22,11 +22,11 @@ module Interfax
         config.api_secret = params['Sendfax']['Password']
       end
 
-      file = Tempfile.new(['tempFax', "." + params['Sendfax']['FileType'].downcase])
+      file = Tempfile.new(['tempFax', "." + params['Sendfax']['FileType'].downcase], :encoding => 'ascii-8bit')
       faxId = nil
 
       begin
-        file.write(params['Sendfax']['FileData'])
+        file.write(Base64.decode64(params['Sendfax']['FileData']))
         file.rewind
         fax = Phaxio.send_fax(
             to: params['Sendfax']['FaxNumber'], filename: file
