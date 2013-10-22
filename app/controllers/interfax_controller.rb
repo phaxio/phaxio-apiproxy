@@ -1,5 +1,6 @@
+require 'require_all'
 require "wash_out/soap"
-require "interfax/sendfax"
+require_all __dir__ + "/interfax"
 
 
 class InterfaxController < ApplicationController
@@ -7,6 +8,10 @@ class InterfaxController < ApplicationController
 
   soap_action "Sendfax", :args => { :Sendfax => Sendfax }, :return => SendfaxResponse
   include Interfax::SendfaxAction
+
+  soap_action "SendCharFax", :args => { :SendCharFax => SendCharFax }, :return => SendCharFaxResponse
+  include Interfax::SendCharFaxAction
+
 
 end
 

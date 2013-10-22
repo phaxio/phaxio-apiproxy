@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/phaxio/wash_out.git
-  revision: 0083369679506f8a288e47113b09906e71fd7285
+  revision: 2822a6ec8362bc651197076a0b51d831fb77dd9b
   specs:
     wash_out (0.9.0.beta.2)
       nori (>= 2.0.0)
@@ -94,11 +94,12 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    require_all (1.3.1)
     ruby-debug-ide (0.4.18)
       rake (>= 0.8.1)
     sass (3.2.12)
-    sass-rails (4.0.0)
-      railties (>= 4.0.0.beta, < 5.0)
+    sass-rails (4.0.1)
+      railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
     sdoc (0.3.20)
@@ -140,8 +141,9 @@ DEPENDENCIES
   phaxio (= 0.4.0)
   rails (= 4.0.0)
   railties (~> 4.0.0)
+  require_all
   ruby-debug-ide
-  sass-rails (= 4.0.0)
+  sass-rails (= 4.0.1)
   sdoc (= 0.3.20)
   sqlite3 (= 1.3.8)
   turbolinks (= 1.1.1)
