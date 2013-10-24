@@ -18,5 +18,12 @@ class InterfaxController < ApplicationController
   soap_action "CancelFax", :args => { :CancelFax => CancelFax }, :return => CancelFaxResponse
   include Interfax::CancelFaxAction
 
+  soap_action "FaxStatusEx", :args => { :FaxStatusExA => FaxStatusEx }, :return => FaxStatusExResponse
+  include Interfax::FaxStatusExAction
+
+  before_filter :dump_parameters
+  def dump_parameters
+      Rails.logger.debug params.inspect
+  end
 end
 
