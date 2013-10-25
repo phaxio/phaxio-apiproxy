@@ -56,8 +56,6 @@ end
 module Interfax
   module FaxStatusExAction
     def FaxStatusEx
-      Phaxio.base_uri 'https://api-phaxio-com-2e76oayxu2or.runscope.net/v1'
-
       Phaxio.config do |config|
         config.api_key = params['FaxStatusExA']['Username']
         config.api_secret = params['FaxStatusExA']['Password']
@@ -100,6 +98,7 @@ module Interfax
     end
 
     def faxItemFromPhaxioFax(fax)
+          puts fax
           return {
               :ParentTransactionID => 0,
               :TransactionID => fax['id'],
