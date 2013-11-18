@@ -20,10 +20,4 @@ The only caveat in our implementation of the service is that for FaxStatusEx, La
 
 Please let us know if you have any issues with the service by filing issues directly on the repository, or by email at support@phaxio.com.
 
-Faxage
-======
-Coming soon!
-
-Metrofax
-========
-Coming soon!
+If you would like to see another thirdparty service implemented in our proxy, please let us know by emailing support@phaxio.com.
